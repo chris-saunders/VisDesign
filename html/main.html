@@ -14,12 +14,16 @@
 <body style="background-color:rgb(67,75,90)"> <!-- Make sure to style the background with this color in html, css wont work -->
 	<!--This is the header, a better programmer would make a separate file so we only import it instead of copying across pages -->
 	<nav class="navbar navbar-default navbar-fixed-top" style="position: relative;">
-		<a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a>
+		
 		<form class="navbar-form">
-        <div class="form-group" style="float: right; padding-bottom: 50px; padding-top:20">
+		<div>
+			<h2 style="text-align: center"></h2>
+		</div>
+        <div class="form-group" style="float: right; padding-bottom: 20px; padding-top:20px">
           <input type="text" class="form-control" placeholder="Search for libraries...">
         </div>
       </form>
+      <a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a>
 	</nav>
 	<div class="container">
 		<div class="row">
@@ -29,8 +33,8 @@
 
 			<div class="col-sm-6">
 				<form>
-					<h2 style="font-weight: bold; text-align: center; margin-top: 30%">Domain</h2>
-					<div class="custom-select">
+					<h2 style="font-weight: bold; text-align: center; margin-top: 20%">Domain</h2>
+					<div class="custom-select" style = "font-size:20px">
 						<select name="domain">
 							<option value="0">Select Domain:</option>
 						    <option value="Testing">Testing</option>
@@ -45,11 +49,11 @@
 						    <option value="XML">XML</option>
 						</select>
 					</div>
-				  <br><br>
-				  	<h2 style="font-weight: bold; text-align: center; margin-top:30% ">Metric</h2>
-				  	<div class="custom-select">
+				  <br>
+				  	<h2 style="font-weight: bold; text-align: center; margin-top:20% ">Metric</h2>
+				  	<div class="custom-select" style = "font-size:20px">
 						<select name="Metric">
-							<option>Select Metric:</option>
+							<option >Select Metric:</option>
 						    <option value="Popularity">Popularity</option>
 						    <option value="Release_Frequency">Release Frequency</option>
 						    <option value="Backwards_Compatibility">Backwards Compatibility</option>
@@ -81,7 +85,7 @@
 
 	<!--Here be the footer -->
 	<div class="footer">
-		<div style="padding-top: 50px">
+		<div style="padding-top: 50px; padding-bottom: 25px">
 			<button class="footer-button" onclick="location.href='about.html'">About Us</button>
 			<button class="footer-button"  onclick="location.href='contact.html'">Contact Us</button>
 			<button class="footer-button"  onclick="location.href='help.html'">Help</button>

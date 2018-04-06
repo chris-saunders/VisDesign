@@ -14,21 +14,24 @@
 
 	<!--This is the header, a better programmer would make a separate file so we only import it instead of copying across pages -->
 	<nav class="navbar navbar-default navbar-fixed-top" style="position: relative;">
-		<a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a>
+		<!-- <a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a> -->
 		<form class="navbar-form">
-
-        <div class="form-group" style="float: right; padding-bottom: 40px">
+		<div>
+			<h2 style="text-align: center"></h2>
+		</div>
+        <div class="form-group" style="float: right; padding-bottom: 20px;padding-top: 20px">
           <input type="text" class="form-control" placeholder="Search for libraries...">
         </div>
       </form>
+      <a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a>
 	</nav>
-	<div class="container">
+	<div class="container" style = "margin-left: 8%">
 	
 		<div class="row">
 			<div class="col-sm-6">
 				<div>
 					<h2 style="text-align: center;margin-top: 30%;">Location</h2>
-					<div class="box">
+					<div class="box" style = "font-size:20px">
 						# 12345 Metric Blvd <br>
 						Edmonton, AB <br>
 						Canada <br>
@@ -36,10 +39,11 @@
 					</div>
 				</div>
 
-				<h2 style="margin-top: 30%; text-align: center;">Get in Touch</h2>
-				<div class="box">
+				<h2 style="margin-top: 20%; text-align: center;">Get in Touch</h2>
+				<div class="box" style = "font-size:20px">
 					contact@company.ca
 				</div>
+				
 			</div>
 			<h2 style="text-align: center;margin-top: 10%;"></h2>
 			<div class="col-sm-6">
@@ -62,7 +66,7 @@
 
 	<!--Here be the footer -->
 	<div class="footer">
-		<div style="padding-top: 50px">
+		<div style="padding-top: 50px; padding-bottom: 25px">
 			<button class="footer-button" onclick="location.href='about.html'">About Us</button>
 			<button class="footer-button"  onclick="location.href='contact.html'">Contact Us</button>
 			<button class="footer-button"  onclick="location.href='help.html'">Help</button>

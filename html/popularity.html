@@ -23,25 +23,30 @@
 		<div>
 			<h2 style="text-align: center;">Popularity</h2>
 		</div>
-        <div class="form-group" style="float: right; padding-bottom: 20px">
+        <div class="form-group" style="float: right; padding-bottom: 20px;padding-top: 20px">
           <input type="text" class="form-control" placeholder="Search for libraries...">
         </div>
       </form>
 	</nav>
 		
 	<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Filter</span>
-	<div class="w3-container">
-
-<!-- Add page info here... -->
-
+	
+	
+<!-- POP UP WINDOW ... -->
+<div class="w3-container">
 <button style="float: right" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">See More Details</button>
+
+
+<!-- Add page body info here if needed... -->
+
+
 
 <div id="id01" class="w3-modal">
  <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-  <header class="w3-container w3-black" style= "padding-top:20px"> 
+  <header class="w3-container w3-black" style= "padding-top:50px"> 
    <span onclick="document.getElementById('id01').style.display='none'" 
-   class="w3-button w3-black w3-xlarge w3-display-topright">&times;</span>
-   <h2>Library Name</h2>
+   class="w3-button w3-black w3-xlarge w3-display-topright"style= "padding-top:50px">&times;</span>
+   <h2 style="text-align: center">Library Name</h2>
   </header>
 
   <div class="w3-bar w3-light-grey w3-border-bottom">
@@ -85,17 +90,21 @@
   </div>
   
   
-<!--   Footer if we want -->
+		<!--   Footer if we want for popout -->
   <div class="w3-container w3-light-grey w3-padding">
-<!--   Close BUTTON (bottom right) -->
 
-  </div>
+
+  	</div>
  </div>
 </div>
 
 </div>
+
+
 	<!--Start Main-->	
-	<div class="container">
+<div class="container">
+	
+	
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
@@ -180,49 +189,78 @@
 	
 	</style>
 	<div id="mySidenav" class="sidenav">
-	  <h2 style="text-align: center"> Domain</h2>
+		<h2 style="text-align: center"> Domain</h2>
+			<div class="custom-select">
+				<select name="domain">
+					<option value="0">Select Domain:</option>
+					<option value="Testing">Testing</option>
+					<option value="Logging">Logging</option>
+					<option value="Utilities">Utilities</option>
+					<option value="Mocking">Mocking</option>
+					<option value="Cryptography">Cryptography</option>
+					<option value="JSON">JSON</option>
+					<option value="Databases">Databases</option>
+					<option value="Security">Security</option>
+					<option value="Object-Relational-Mapping">Object-Relational-Mapping</option>
+					<option value="XML">XML</option>
+				</select>
+			</div>
+		  <br><br>
+			<h2 style="text-align: center"> Metric</h2>
+			<div class="custom-select">
+				<select name="Metric">
+					<option>Select Metric:</option>
+					<option value="Popularity">Popularity</option>
+					<option value="Release_Frequency">Release Frequency</option>
+					<option value="Backwards_Compatibility">Backwards Compatibility</option>
+					<option value="Issue_Responses">Issue Responses</option>
+					<option value="Issue_Types"> Issue Types</option>
+				</select>
+			</div>
 	  <br><br>
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <h2 style="text-align: center"> Metric</h2>
-	  <a href="#">Annual</a>
-	  <a href="#">Monthly</a>
-	  <a href="#">Average</a>
 	  <br><br>
-	  <h2 style="text-align: center"> Order By</h2>
+	  <h2 style="text-align: center">View Changer</h2><br><br>	 
+	  <form action="" style="margin-left: 20%; font-size:20px">
+		  <input type="radio" name="gender" value="alpha"> Alphabetical<br>
+		  <input type="radio" name="gender" value="hilow"> High to Low<br>
+		  <input type="radio" name="gender" value="log"> Log<br>
+		  <input type="radio" name="gender" value="reverse"> Reverse
+		</form><br><br>
+	  <a style="margin-left: 15%" href="#">UPDATE</a>
 	  <br><br>
 
 	</div>
 	
-
-<!-- 
-	<div class="tab">
-	  <button class="tablinks" onclick="changeTab(event, 'Annual Frequency')">Annual Frequency</button>
-	  <button class="tablinks" onclick="changeTab(event, 'Monthly Frequency')">Monthly Frequency</button>
-	  <button class="tablinks" onclick="changeTab(event, 'Average Annual Frequency')">Average Annual Frequency</button>
-	</div>
-
-	<div id="Annual Frequency" class="tabcontent">
-	  <h3>Annual Frequency</h3>
-	  <p>INSERT GRAPH.</p>
-	</div>
-
-	<div id="Monthly Frequency" class="tabcontent">
-	  <h3>Monthly Frequency</h3>
-	  <p>Insert Graph.</p> 
-	</div>
-
-	<div id="Average Annual Frequency" class="tabcontent">
-	  <h3>Average Annual Frequency</h3>
-	  <p>INSERT GRAPH.</p>
-	</div>
- -->
-
-
 	
-	</div>
+<!-- 	ADD THE IMAGE HERE ***************************************************************** -->
 
- 
+	<div class="container" style = "margin-left: 20%">
+	
+		<div class="row">
+			<div class="col-sm-6">
+			<h2 style="text-align: center;margin-top: 10%;"></h2>
+			<div class="col-sm-6">
+				<div class="box clearfix" style="width: 300%">
+				<img src="popularity_mocking.png" style=" width: 100%">
+				</div>
+
+			</div>
+
+
+		</div>
+	
+	</div> <!-- END IMAGE CONTAINER DIV -->
+
+	</div> <!-- END DIV -->
+
+
+
+
+
+ <!-- START SCRIPTS ------------------------------------------>
 	<script>
+// 	NAV BAR  ***************************************************************************
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "250px";
 	}
@@ -230,25 +268,18 @@
 	function closeNav() {
 		document.getElementById("mySidenav").style.width = "0";
 	}
+	function divBack() {
+		document.getElementByID("Release Frequency").style.backgroundColor= "black";
+		}
 	
-	function changeTab(evt, tabName) {
-		var i, tabcontent, tablinks;
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(tabName).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
+// 	Tab Selection  ***************************************************************************
+
 	document.getElementsByClassName("tablink")[0].click();
 
 	function openTab(evt, changeName) {
 	  var i, x, tablinks;
 	  x = document.getElementsByClassName("tabName");
+	  
 	  for (i = 0; i < x.length; i++) {
 		x[i].style.display = "none";
 	  }
@@ -257,14 +288,91 @@
 		tablinks[i].classList.remove("w3-light-grey");
 	  }
 	  document.getElementById(changeName).style.display = "block";
+	  document.getElementById(changeName).style.backgroundColor = "#272C37";
 	  evt.currentTarget.classList.add("w3-light-grey");
+	  
 	}
+	
+	// 	DOMAIN AND METRIC MENU SELECTION ***************************************************************************
+	//  From main menu..... 
+		x = document.getElementsByClassName("custom-select");
+		for (i = 0; i < x.length; i++) {
+		  selElmnt = x[i].getElementsByTagName("select")[0];
+		  /*for each element, create a new DIV that will act as the selected item:*/
+		  a = document.createElement("DIV");
+		  a.setAttribute("class", "select-selected");
+		  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+		  x[i].appendChild(a);
+		  /*for each element, create a new DIV that will contain the option list:*/
+		  b = document.createElement("DIV");
+		  b.setAttribute("class", "select-items select-hide");
+		  for (j = 1; j < selElmnt.length; j++) {
+			/*for each option in the original select element,
+			create a new DIV that will act as an option item:*/
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			c.addEventListener("click", function(e) {
+				/*when an item is clicked, update the original select box,
+				and the selected item:*/
+				var i, s, h;
+				s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+				h = this.parentNode.previousSibling;
+
+				right = document.getElementsByClassName("box")[0]; /*HERE IS WHERE I TINKER*/
+				for (i = 0; i < s.length; i++) {
+				  if (s.options[i].innerHTML == this.innerHTML) {
+					s.selectedIndex = i;
+					h.innerHTML = this.innerHTML;
+					if (h.innerHTML in libs){
+						right.innerHTML = rightText + libs[h.innerHTML];
+					}
+					right.style.display = "block";
+					console.log(rightText + libs[h.innerHTML]);
+					break;
+				  }
+				}
+				h.click();
+			});
+			b.appendChild(c);
+		  }
+		  x[i].appendChild(b);
+		  a.addEventListener("click", function(e) {
+			  /*when the select box is clicked, close any other select boxes,
+			  and open/close the current select box:*/
+			  e.stopPropagation();
+			  closeAllSelect(this);
+			  this.nextSibling.classList.toggle("select-hide");
+			  this.classList.toggle("select-arrow-active");
+		  });
+		}
+		function closeAllSelect(elmnt) {
+		  /*a function that will close all select boxes in the document,
+		  except the current select box:*/
+		  var x, y, i, arrNo = [];
+		  x = document.getElementsByClassName("select-items");
+		  y = document.getElementsByClassName("select-selected");
+		  for (i = 0; i < y.length; i++) {
+			if (elmnt == y[i]) {
+			  arrNo.push(i)
+			} else {
+			  y[i].classList.remove("select-arrow-active");
+			}
+		  }
+		  for (i = 0; i < x.length; i++) {
+			if (arrNo.indexOf(i)) {
+			  x[i].classList.add("select-hide");
+			}
+		  }
+		}
+		/*if the user clicks anywhere outside the select box,
+		then close all select boxes:*/
+		document.addEventListener("click", closeAllSelect);
 	</script>
 
 
 	<!--Here be the footer -->
 	<div class="footer">
-		<div style="padding-top: 50px">
+		<div style="padding-top: 50px; padding-bottom: 25px">
 			<button class="footer-button" onclick="location.href='about.html'">About Us</button>
 			<button class="footer-button"  onclick="location.href='contact.html'">Contact Us</button>
 			<button class="footer-button"  onclick="location.href='help.html'">Help</button>
