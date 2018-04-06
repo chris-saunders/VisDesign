@@ -29,7 +29,7 @@
 
 			<div class="col-sm-6">
 				<form>
-					<h2 style="font-weight: bold; text-align: center;">Domain</h2>
+					<h2 style="font-weight: bold; text-align: center; margin-top: 30%">Domain</h2>
 					<div class="custom-select">
 						<select name="domain">
 							<option value="0">Select Domain:</option>
@@ -46,7 +46,7 @@
 						</select>
 					</div>
 				  <br><br>
-				  	<h2 style="font-weight: bold; text-align: center;">Metric</h2>
+				  	<h2 style="font-weight: bold; text-align: center; margin-top:30% ">Metric</h2>
 				  	<div class="custom-select">
 						<select name="Metric">
 							<option>Select Metric:</option>
@@ -64,8 +64,14 @@
 			</div>
 
 			<div class="col-sm-3">
-				<div class="box" style="background-color: #434954; width: 100%">
+				<div class="box" style="background-color: #434954; width: 100%; margin-top: 200px; display: none;">
 					Libraries in SOMETHING:
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
 				</div>
 			</div>
 		
@@ -88,6 +94,24 @@
 
 <script type="text/javascript">var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
+
+var rightText = "Libraries in <span style=\"font-weight:bold\">"
+var libs = {"Utilities" : "Utilities:</span><br><br>guava <br>commons lang",
+			"Testing" : "Testing:</span><br><br>junit4 <br>testng",
+			"Logging" : "Logging:</span><br><br>slf4j <br>log4j2<br>logback<br>commons logging<br>tinylog<br>blitz4j<br>minlog",
+			"Mocking" : "Mocking:</span><br><br>mockito<br>easymock<br>powermock<br>jmock",
+			"Cryptography" : "Cryptography:</span><br><br>bouncycastle<br>commons crypto<br>conceal<br>chimera<br>spongycastle<br>keyczar<br>conscrypt",
+			"JSON" : "JSON:</span><br><br>gson<br>json.simple",
+			"Databases" : "Databases:</span><br><br>h2<br>derby",
+			""
+
+
+
+
+
+			};
+
+
 x = document.getElementsByClassName("custom-select");
 for (i = 0; i < x.length; i++) {
   selElmnt = x[i].getElementsByTagName("select")[0];
@@ -110,10 +134,15 @@ for (i = 0; i < x.length; i++) {
         var i, s, h;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         h = this.parentNode.previousSibling;
+
+        right = document.getElementsByClassName("box")[0]; /*HERE IS WHERE I TINKER*/
         for (i = 0; i < s.length; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
+            right.innerHTML = rightText + libs[h.innerHTML];
+            right.style.display = "block";
+            console.log(rightText + libs[h.innerHTML]);
             break;
           }
         }
