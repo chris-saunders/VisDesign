@@ -10,9 +10,9 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 	
 </head>
-<body style="background-color:rgb(67,75,90)"">
+<body style="background-color:rgb(67,75,90)"> <!-- Make sure to style the background with this color in html, css wont work -->
+	<!--This is the header, a better programmer would make a separate file so we only import it instead of copying across pages -->
 	<nav class="navbar navbar-default navbar-fixed-top" style="position: relative;">
-
 		<a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a>
 		<form class="navbar-form">
         <div class="form-group" style="float: right; padding-bottom: 5px">
@@ -31,11 +31,13 @@
 
 	
 	</div>
+
+	<!--Here be the footer -->
 	<div class="footer">
 		<div style="padding-top: 5px">
-			<button class="footer-button">About Us</button>
-			<button class="footer-button">Contact Us</button>
-			<button class="footer-button">Help</button>
+			<button class="footer-button" onclick="location.href='about.html'">About Us</button>
+			<button class="footer-button"  onclick="location.href='contact.html'">Contact Us</button>
+			<button class="footer-button"  onclick="location.href='help.html'">Help</button>
 		</div>
   		<p>Copyright 2018 etc.</p>
 	</div>

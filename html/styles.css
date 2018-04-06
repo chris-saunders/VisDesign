@@ -60,3 +60,15 @@ input[type=text] {
     border-style: solid;
     border-width: thin;
 }
+
+.panel-heading{
+	color: red;
+	background-color: var(--button-back-color);
+}
+
+.panel{
+	color: white;
+	background-color: var(--button-back-color);
+
+
+}
