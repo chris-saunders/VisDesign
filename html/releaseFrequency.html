@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Release Frequency</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+	
+</head>
+<body style="background-color:rgb(67,75,90)">
+
+
+	<!--This is the header, a better programmer would make a separate file so we only import it instead of copying across pages -->
+	<nav class="navbar navbar-default navbar-fixed-top" style="position: relative;">
+		<a class="navbar-brand" href="main.html" style="text-align: center; color: white; padding-top: 20px">Name of Web App</a>
+		<form class="navbar-form">
+		<div>
+			<h2 style="text-align: center;">Release Frequency</h2>
+		</div>
+        <div class="form-group" style="float: right; padding-bottom: 20px">
+          <input type="text" class="form-control" placeholder="Search for libraries...">
+        </div>
+      </form>
+	</nav>
+		
+	<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Filter</span>
+	<!--Start Main-->	
+	<div class="container">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {font-family: Arial;}
+
+	/* Style the tab */
+	.tab {
+		overflow: hidden;
+		border: 2px solid white;
+		background-color: #272C37;
+	}
+
+	/* Style the buttons inside the tab */
+	.tab button {
+		background-color: inherit;
+		float: left;
+		border: none;
+		outline: 1px solid white;
+		cursor: pointer;
+		padding: 14px 16px;
+		transition: 0.3s;
+		font-size: 17px;
+	}
+
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+		background-color: #ddd;
+	}
+
+	/* Create an active/current tablink class */
+	.tab button.active {
+		background-color: #ccc;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		display: none;
+		padding: 300px 50px;
+		border: 2px solid #ccc;
+		border-top: none;
+	}
+		.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 200px;
+	}
+
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+		color: white;
+		padding-top: 140px;
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	}
+	
+	</style>
+	<div id="mySidenav" class="sidenav">
+	  <h2> Options</h2>
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="#">About</a>
+	  <a href="#">Services</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+	
+
+	<div class="tab">
+	  <button class="tablinks" onclick="changeTab(event, 'Annual Frequency')">Annual Frequency</button>
+	  <button class="tablinks" onclick="changeTab(event, 'Monthly Frequency')">Monthly Frequency</button>
+	  <button class="tablinks" onclick="changeTab(event, 'Average Annual Frequency')">Average Annual Frequency</button>
+	</div>
+
+	<div id="Annual Frequency" class="tabcontent">
+	  <h3>Annual Frequency</h3>
+	  <p>INSERT GRAPH.</p>
+	</div>
+
+	<div id="Monthly Frequency" class="tabcontent">
+	  <h3>Monthly Frequency</h3>
+	  <p>Insert Graph.</p> 
+	</div>
+
+	<div id="Average Annual Frequency" class="tabcontent">
+	  <h3>Average Annual Frequency</h3>
+	  <p>INSERT GRAPH.</p>
+	</div>
+
+
+	
+	</div>
+<!-- 
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Options</span>
+	<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+	</script>
+ -->
+	<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+	
+	function changeTab(evt, tabName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(tabName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+	
+	</script>
+
+
+	<!--Here be the footer -->
+	<div class="footer">
+		<div style="padding-top: 50px">
+			<button class="footer-button" onclick="location.href='about.html'">About Us</button>
+			<button class="footer-button"  onclick="location.href='contact.html'">Contact Us</button>
+			<button class="footer-button"  onclick="location.href='help.html'">Help</button>
+		</div>
+  		<p>Copyright 2018 etc.</p>
+	</div>
+
+</body>
+</html>
