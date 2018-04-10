@@ -32,7 +32,8 @@
 			</div>
 
 			<div class="col-sm-6">
-				<form action = 'releaseFrequency.html'>
+				<!-- <form action = 'releaseFrequency.html'> -->
+				<form>
 					<h2 style="font-weight: bold; text-align: center; margin-top: 10%">Domain</h2>
 					<div class="custom-select" style = "font-size:20px">
 						<select name="domain">
@@ -54,8 +55,8 @@
 				  	<div class="custom-select" style = "font-size:20px">
 						<select name="Metric">
 							<option >Select Metric:</option>
-						    <option value="Popularity">Popularity</option>
-						    <option value="Release_Frequency">Release Frequency</option>
+						    <option value="popularity">Popularity</option>
+						    <option value="releaseFrequency">Release Frequency</option>
 						    <option value="Backwards_Compatibility">Backwards Compatibility</option>
 						    <option value="Issue_Responses">Issue Responses</option>
 						    <option value="Issue_Types"> Issue Types</option>
@@ -63,7 +64,26 @@
 					</div>
 					<br>
 					<br>
-				  <input type="submit" value="Submit" class="visualizeBut" style="margin-left: 20%; margin-top: 2%">
+<!-- 
+				  <script>
+				  
+				   function getUrl(){
+				   
+				   
+				   var var1 = document.getElementByName('Metric')[0].value
+				   var var2 = document.getElementByName('Domain')[0].value
+				   console.log(var1)
+				   console.log(var2)
+				   
+				   
+				   var url = window.location.href; // returnsfull URL
+				   
+				   // document.getElementById("Submit").onclick = function() 
+				    return (window.location.href= url+ var2);
+				    }
+				    </script>
+ -->
+				  <input type="submit" id ="Submit" value="Submit" class="visualizeBut" style="margin-left: 20%; margin-top: 2%" onclick ="return getURL();")>
 				</form>
 			</div>
 
@@ -110,11 +130,6 @@ var libs = {"Utilities" : "Utilities:</span><br><br>guava <br>commons lang",
 			"Security" : "Security:</span><br><br>shiro<br>spring security",
 			"Object-Relational-Mapping" : "Object-Relational-Mapping:</span><br><br>hibernate orm<br>mybatis3<br>ormlite",
 			"XML" : "XML</span><br><br>xerces2-j<br>dom4j<br>jdom"
-
-
-
-
-
 
 			};
 
@@ -169,6 +184,31 @@ for (i = 0; i < x.length; i++) {
       this.classList.toggle("select-arrow-active");
   });
 }
+function getComboA(Domain){
+    var value= Domain.value;
+}
+
+
+function getComboB(Metric){
+    var value= Metric.value;
+}
+
+
+function getUrl(){
+
+
+var var1 = document.getElementByName('Metric')[0].value
+var var2 = document.getElementByName('Domain')[0].value
+console.log(var1)
+console.log(var2)
+
+
+var url = window.location.href; // returnsfull URL
+
+// document.getElementById("Submit").onclick = function() 
+return (window.location.href= url+ var2);
+}
+
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
   except the current select box:*/
