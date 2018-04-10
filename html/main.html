@@ -32,11 +32,11 @@
 			</div>
 
 			<div class="col-sm-6">
-				<!-- <form action = 'releaseFrequency.html'> -->
-				<form>
+				<form action = 'releaseFrequency.html'>
+				<!-- <form> -->
 					<h2 style="font-weight: bold; text-align: center; margin-top: 10%">Domain</h2>
 					<div class="custom-select" style = "font-size:20px">
-						<select name="domain">
+						<select id="domain">
 							<option value="0">Select Domain:</option>
 						    <option value="Testing">Testing</option>
 						    <option value="Logging">Logging</option>
@@ -53,7 +53,7 @@
 				  <br>
 				  	<h2 style="font-weight: bold; text-align: center; margin-top:10% ">Metric</h2>
 				  	<div class="custom-select" style = "font-size:20px">
-						<select name="Metric">
+						<select id="Metric">
 							<option >Select Metric:</option>
 						    <option value="popularity">Popularity</option>
 						    <option value="releaseFrequency">Release Frequency</option>
@@ -70,8 +70,11 @@
 				   function getUrl(){
 				   
 				   
-				   var var1 = document.getElementByName('Metric')[0].value
-				   var var2 = document.getElementByName('Domain')[0].value
+				   var var1 = document.getElementById('Metric')[0]
+				   var strVar1 = var1.value
+				   
+				   var var2 = document.getElementById('Domain')[0]
+				   var strVar2 = var2.value
 				   console.log(var1)
 				   console.log(var2)
 				   
@@ -79,11 +82,12 @@
 				   var url = window.location.href; // returnsfull URL
 				   
 				   // document.getElementById("Submit").onclick = function() 
-				    return (window.location.href= url+ var2);
+				    return (window.location.href= url+ strVar2);
 				    }
 				    </script>
  -->
-				  <input type="submit" id ="Submit" value="Submit" class="visualizeBut" style="margin-left: 20%; margin-top: 2%" onclick ="return getURL();")>
+
+				  <input type="submit" value="Submit" class="visualizeBut" style="margin-left: 20%; margin-top: 2%" )>
 				</form>
 			</div>
 
@@ -194,20 +198,20 @@ function getComboB(Metric){
 }
 
 
-function getUrl(){
-
-
-var var1 = document.getElementByName('Metric')[0].value
-var var2 = document.getElementByName('Domain')[0].value
-console.log(var1)
-console.log(var2)
-
-
-var url = window.location.href; // returnsfull URL
-
-// document.getElementById("Submit").onclick = function() 
-return (window.location.href= url+ var2);
-}
+// function getUrl(){
+// 
+// 
+// var var1 = document.getElementByName('Metric')[0].value
+// var var2 = document.getElementByName('Domain')[0].value
+// console.log(var1)
+// console.log(var2)
+// 
+// 
+// var url = window.location.href; // returnsfull URL
+// 
+// // document.getElementById("Submit").onclick = function() 
+// return (window.location.href= url+ var2);
+// }
 
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
